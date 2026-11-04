@@ -5,6 +5,7 @@ Uma aplicação FastAPI super simples que permite que estudantes visualizem e se
 ## Funcionalidades
 
 - Visualizar todas as atividades extracurriculares disponíveis
+- Visualizar e remover participantes de cada atividade
 - Inscrever-se em atividades
 
 ## Primeiros Passos
@@ -25,12 +26,21 @@ Uma aplicação FastAPI super simples que permite que estudantes visualizem e se
    - Documentação da API: http://localhost:8000/docs
    - Documentação alternativa: http://localhost:8000/redoc
 
+## Testes da interface
+
+Com Node.js 18 ou superior, execute na raiz do repositório:
+
+```
+node --test tests/activity-cards.test.js
+```
+
 ## Endpoints da API
 
 | Método | Endpoint                                                          | Descrição                                                                   |
 | ------ | ----------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | GET    | `/activities`                                                     | Obtém todas as atividades com seus detalhes e contagem atual de participantes |
 | POST   | `/activities/{activity_name}/signup?email=student@mergington.edu` | Inscreve-se em uma atividade                                                |
+| DELETE | `/activities/{activity_name}/signup?email=student@mergington.edu` | Remove um participante de uma atividade                                    |
 
 ## Modelo de Dados
 
